@@ -1,0 +1,5 @@
+.robota__block {
+    display: flex;
+    justify-content: space-between;
+    margin: 60px;
+}

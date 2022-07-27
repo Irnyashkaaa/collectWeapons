@@ -1,0 +1,10 @@
+.flex__zrazok_robobl {
+    background-color: #292929;
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+}
+
+.flex__zrazok_robobl img {
+    max-width: 80px;
+}

@@ -1,0 +1,10 @@
+.block__flex {
+    display: flex;
+    gap: 30px;
+    max-width: 300px;
+    flex-wrap: wrap;
+    background-color: #1f1f1e;
+    border-radius: 10px;
+    padding: 20px;
+    align-items: center;
+}

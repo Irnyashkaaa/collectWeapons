@@ -1,0 +1,22 @@
+.header {
+    background-color: #202020;
+    border-radius: 10px;
+}
+
+.header__flex {
+    max-width: 780px;
+    margin: auto;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex__block-2 {
+    background-color: #383838;
+    border-radius: 50%;
+    padding: 5px 5px 0 5px;
+}
+
+.flex__block-2 img {
+    width: 20px;
+}
