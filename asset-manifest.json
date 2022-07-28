@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/collectWeapons/static/css/main.75b51eed.css",
+    "main.js": "/collectWeapons/static/js/main.1cde36a3.js",
+    "static/js/787.05b2ee21.chunk.js": "/collectWeapons/static/js/787.05b2ee21.chunk.js",
+    "static/media/factory_ammo.png": "/collectWeapons/static/media/factory_ammo.ead4fcdeb1d8c75717f5.png",
+    "static/media/factory_wood.png": "/collectWeapons/static/media/factory_wood.6f4b1df7cb691ac50f17.png",
+    "static/media/factory_scrap.png": "/collectWeapons/static/media/factory_scrap.d331af68f1695bffb6e1.png",
+    "static/media/factory_metall.png": "/collectWeapons/static/media/factory_metall.63a4dfcb6e77360ba689.png",
+    "index.html": "/collectWeapons/index.html",
+    "main.75b51eed.css.map": "/collectWeapons/static/css/main.75b51eed.css.map",
+    "main.1cde36a3.js.map": "/collectWeapons/static/js/main.1cde36a3.js.map",
+    "787.05b2ee21.chunk.js.map": "/collectWeapons/static/js/787.05b2ee21.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.75b51eed.css",
+    "static/js/main.1cde36a3.js"
+  ]
+}
