@@ -8,7 +8,11 @@ export type cellType = {
     cellIndex: number
 }
 
-export const MainBlock: React.FC = () => {
+type propsType = {
+    setIsComplete: (isComplete: boolean) => void
+}
+
+export const MainBlock: React.FC<propsType> = ({ setIsComplete }) => {
 
     const [start, setStart] = useState<boolean>(false)
 
@@ -56,29 +60,37 @@ export const MainBlock: React.FC = () => {
         setStart(true)
     }, [])
 
-    const checkIsSame = () => {
-        for (let i = 0; i < 9; i++) {
-            if (firstBlockCells[i].imageNumber && secondBlockCells[i].imageNumber && secondBlockCells[i].imageNumber !== firstBlockCells[i].imageNumber) {
-                return setFirstBlockRandomCells()
-            } else if (firstBlockCells[i].imageNumber
-                && secondBlockCells[i].imageNumber && secondBlockCells[i].imageNumber === firstBlockCells[i].imageNumber) {
-                    let newCells = [...firstBlockCells, firstBlockCells[i].imageNumber = null]
-                    newCells.length = 9
-                    //@ts-ignore
-                    return setFirstBlockCells(newCells)
-            }
-        }
-    }
-
+    // check is game complete
     useEffect(() => {
-        checkIsSame()
-    }, [secondBlockCells])
+        let countEmptyCell = 0
+        firstBlockCells.map(cell => {
+            if (!cell.imageNumber) {
+                countEmptyCell++
+            }
+        })
+        if (countEmptyCell === 9) setIsComplete(true)
+    }, [firstBlockCells])
 
+    const [currentCell, setCurrentCell] = useState<cellType>({ blockNumber: 2, imageNumber: 1, cellIndex: 0 })
 
     return (
         <div className={s.robota__block}>
-            <Block cells={firstBlockCells} setCellsBlock={setFirstBlockCells} />
-            <Block cells={secondBlockCells} setCellsBlock={setSecondBlockCells} />
+            <Block
+                setAnotherBlockCells={setSecondBlockCells}
+                anotherBlockCells={secondBlockCells}
+                cells={firstBlockCells}
+                setFirstBlockRandomCells={setFirstBlockRandomCells}
+                setCellsBlock={setFirstBlockCells}
+                currentCell={currentCell}
+                setCurrentCell={setCurrentCell} />
+            <Block
+                setAnotherBlockCells={setFirstBlockCells}
+                anotherBlockCells={firstBlockCells}
+                cells={secondBlockCells}
+                setFirstBlockRandomCells={setFirstBlockRandomCells}
+                setCellsBlock={setSecondBlockCells}
+                currentCell={currentCell}
+                setCurrentCell={setCurrentCell} />
         </div>
     )
 }

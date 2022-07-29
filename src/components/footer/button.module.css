@@ -1,11 +1,13 @@
 .block__button {
-    max-width: 750px;
+    width: 750px;
     border-radius: 5px;
     background: linear-gradient(90deg, rgba(255, 26, 26, 1) 0%, rgba(255, 42, 42, 1) 100%);
     box-shadow: 0px 4px 0px 1px rgba(156, 38, 38, 1);
     color: #000;
-    margin: auto;
     text-align: center;
     padding: 12px 0 12px 0;
-    margin-top: 40px;
+    margin-bottom: 40px;
+    font-family: 'Gilroy-Medium', sans-serif;
+    font-size: 22px;
+    cursor: pointer;
 }
